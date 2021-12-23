@@ -1,0 +1,15 @@
+.image-preview {
+  width: 300px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #cccc;
+  border: 2px solid #dddd;
+  margin-top: 15px;
+}
+.default-image {
+  display: none;
+  width: 100%;
+}

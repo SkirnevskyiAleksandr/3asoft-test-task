@@ -4,9 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>3asoft-test-task</title>
   </head>
   <body>
-    <input type="file" name="pictures" multiple accept="image/jpeg,image/png" />
+    <h1>Image Preview on File Uploads</h1>
+    <!-- input button -->
+    <input
+      id="inputFile"
+      type="file"
+      name="inpFile"
+      multiple
+      accept="image/jpeg,image/png"
+    />
+    <!-- image container -->
+    <div id="imagePerview" class="image-preview">
+      <img src="" alt="Image Preview" class="default-image" />
+      <span class="image-default-text">image Preview</span>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
