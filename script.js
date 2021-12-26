@@ -21,9 +21,7 @@ fileInput.addEventListener('change', function preview() {
             img.setAttribute("src", reader.result); //result of reading file
             figure.insertBefore(img, figCap);
             localStorage.setItem(fileInput.files[index].name, reader.result)
-            // for (let c = 0; c < localStorage.length; c++) {
 
-            // }
         })
         imageContainer.appendChild(figure);
         document.location.reload()
@@ -44,29 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
         let figCap = document.createElement("figcaption");
         figCap.innerText = localStorage.key(b);
         figure.appendChild(figCap); //add figcaption in figure
+        console.log(figCap.innerHTML)
 
 
         let img = document.createElement("img")
         img.setAttribute("src", localStorage.getItem(localStorage.key(b))); //result of reading file
         figure.insertBefore(img, figCap);
+
         imageContainer.appendChild(figure);
+
+        imageContainer.addEventListener('click', (e) => {
+            if (e.target && e.target.tagName == 'IMG') {
+                e.target.parentNode.remove()
+                localStorage.removeItem(e.target.nextSibling.innerText)
+            }
+        })
 
     }
 })
 
-const figureTag = document.querySelectorAll('figure')
-console.log
-figureTag.forEach(item => {
-    item.addEventListener('click', () => { console.log('dd') })
-});
 
-imageContainer.addEventListener('click', (e) => {
-    if (e.target && e.target.tagName == 'figure') { console.log("aa") }
-})
 
-    // .addEventListener('click', (e) => {
-    //     if (e.target && e.target.tagName == 'Figure') { console.log("hello") }
 
-    // })
+
+
 
 
