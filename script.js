@@ -1,11 +1,11 @@
 
 let fileInput = document.getElementById("file-input");//input
 let imageContainer = document.getElementById("images"); //container for images
-let numOfFiles = document.getElementById("num-of-files"); // number of selected files
+// let numOfFiles = document.getElementById("num-of-files"); // number of selected files
 
 fileInput.addEventListener('change', function preview() {
     imageContainer.innerHTML = "";
-    numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+    // numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
 
     for (let index = 0; index < fileInput.files.length; index++) {
 
@@ -35,7 +35,7 @@ fileInput.addEventListener('change', function preview() {
 
 document.addEventListener('DOMContentLoaded', () => {
     imageContainer.innerHTML = "";
-    numOfFiles.textContent = `${localStorage.length} Files Selected`;
+    // numOfFiles.textContent = `${localStorage.length} Files Selected`;
     for (let b = 0; b < localStorage.length; b++) {
 
         let figure = document.createElement("figure");
